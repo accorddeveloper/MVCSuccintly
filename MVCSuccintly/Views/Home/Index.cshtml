@@ -1,0 +1,15 @@
+﻿@model MVCSuccintly.Models.GreetingModel /* associo il Model alla View */
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<hgroup class="title">
+    <h2>@Model.Greeting</h2> <!-- Inietta il valore della proprietà. Model avrà i valori specificati nell'action Index del Controller associata a questa View -->
+    <h3>@Model.Name</h3>
+</hgroup>
+
+@Html.LabelFor(g => g.Greeting) <!-- HTML Helpers, permettono di generare markup HTML pulito e standard -->
+@Html.TextBoxFor(g => g.Name);  <!-- Gli HTML Helpers usano lambra espressioni come parametro per specificare quale proprietà dal Model usare-->
+

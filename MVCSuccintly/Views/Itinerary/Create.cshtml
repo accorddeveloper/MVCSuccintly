@@ -1,0 +1,18 @@
+﻿@model MVCSuccintly.Models.ItineraryItem
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+ 
+<div class="editor">
+    @using (Html.BeginForm())
+    { <!-- l'istruzione using wrappa il codice del blocco successivo nel form creato dal BeginForm che è un HTML Helper -->
+        @Html.ValidationSummary(true)        <!-- Per mostrare il messaggio di errore(sommario) dovuto alla non validità del ModelState.
+        Settato a true mostra solamente il sommario e non anche singoli messaggi relativi alle singole proprietà non valide.
+        -->
+        @Html.EditorFor(m => m) <!-- utilizza l'editor template definito in ItineraryItem.cshtml-->
+    <p><input type="submit" value="Save" /></p>
+    }
+</div>

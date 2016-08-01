@@ -1,0 +1,31 @@
+﻿<!-- definisce un editor template-->
+<p>
+    @Html.LabelFor(m => m.Description)
+    <!-- Le lambra espressioni esprimono una funzione anonima(funzione locale passata come argomento),
+         m è il parametro passato alla funzione (in questo caso sarà il Model passato alla View),
+          m => m.Description specifica su quale proprietà del Model agire-->
+    @Html.EditorFor(m => m.Description)
+    @Html.ValidationMessageFor(m => m.Description)
+</p>
+<p>
+    @Html.LabelFor(m => m.When)
+    @Html.EditorFor(m => m.When)
+    @Html.ValidationMessageFor(m => m.When)
+</p>
+<p>
+    @Html.LabelFor(m => m.Duration)
+    @Html.EditorFor(m => m.Duration)
+    <!-- EditorFor invece di TextBoxFor, lascia decidere al framework che editor utilizzare.
+        Il framework genererà un textbox "intelligente" che supporta il tipo number.-->
+    @Html.ValidationMessageFor(m => m.Duration)
+</p>
+<p>
+    @Html.LabelFor(m => m.IsActive)
+    @Html.EditorFor(m => m.IsActive)
+    @Html.ValidationMessageFor(m => m.IsActive)
+</p>
+<p>
+    @Html.LabelFor(m => m.Confirmed)
+    @Html.EditorFor(m => m.Confirmed)
+    @Html.ValidationMessageFor(m => m.Confirmed)
+</p>
